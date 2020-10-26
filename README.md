@@ -42,7 +42,25 @@ background-color: salmon;
 | Functions | Description |
 | ----------- | ----------- |
 | `changeStatus()` | Controls whether game is active |
-| 'checkForWin()` | Checks to see if a winner has been reached |
+| `checkForWin()` | Checks to see if a winner has been reached |
+| `handleClick()` | Handles actions taken when a player clicks on the game board |
+| `resetGame()` | Resets the game so player can clear the board and play again |
+
+| Event Listeners | Description |
+| ----------- | ----------- |
+| `box0 - box8` | Listens for player clicks on the specified box within the game board. Takes `handleClick` as a callback function |
+| `resetButton` | Listens for clicks to the reset button. Takes `resetGame` as a callback function |
+
+| Variables | Description |
+| ----------- | ----------- |
+| `turn` | Holds the current player's symbol (X or O) |
+| `turnNumber` | Tracks the number of clicks on the baord. At 9 clicks if no winner is declared the game is a draw/tie |
+| `box0 - box8` | Holds the current player's symbol (X or O) |
+| `turnNumber` | Using querySelector grabs the box elements from the board |
+| `resetButton` | Using querySelector grabs tthe reset button |
+| `winningArray` | Nested array containing all possible winning combinations |
+| `emptyBoard` | Contains empty array representing the indexes of the board |
+
 
 
 
